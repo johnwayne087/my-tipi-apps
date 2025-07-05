@@ -1,3 +1,7 @@
+## 7/4/25
+Updated nextcloud to use latest version
+
+
 # Example App Store Template
 
 This repository serves as a template for creating your own custom app store for the Runtipi platform. Use this as a starting point to create and share your own collection of applications.
