@@ -1,0 +1,19 @@
+{
+  "name": "ConvertX",
+  "id": "convertx",
+  "description": "An open source file converter.",
+  "image": "c4illin/convertx:latest",
+  "version": "latest",
+  "ports": {
+    "8080": {
+      "name": "Web UI",
+      "description": "The main web interface for ConvertX."
+    }
+  },
+  "available": true,
+  "access": {
+    "root": false
+  },
+  "author": "C4illin",
+  "official": "https://github.com/C4illin/ConvertX"
+}
