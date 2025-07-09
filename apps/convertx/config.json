@@ -1,19 +1,13 @@
 {
   "name": "ConvertX",
   "id": "convertx",
-  "description": "An open source file converter.",
-  "image": "c4illin/convertx:latest",
+  "short_desc": "A free and open source file converter.",
+  "description": "ConvertX is a free and open source file converter that allows you to convert files from one format to another.",
   "version": "latest",
-  "ports": {
-    "8080": {
-      "name": "Web UI",
-      "description": "The main web interface for ConvertX."
-    }
-  },
-  "available": true,
-  "access": {
-    "root": false
-  },
   "author": "C4illin",
-  "official": "https://github.com/C4illin/ConvertX"
+  "official": "https://github.com/C4illin/ConvertX",
+  "categories": [
+    "Utilities"
+  ],
+  "available": true
 }
