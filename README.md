@@ -1,3 +1,6 @@
+## 9/26/25
+Updated nextcloud version
+
 ## 7/4/25
 Updated nextcloud to use latest version
 
