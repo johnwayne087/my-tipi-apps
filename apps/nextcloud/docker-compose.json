@@ -3,7 +3,7 @@
   "services": [
     {
       "name": "nextcloud",
-      "image": "nextcloud:31.0.6-apache",
+      "image": "latest",
       "isMain": true,
       "internalPort": 80,
       "environment": {
@@ -68,7 +68,7 @@
     },
     {
       "name": "cron",
-      "image": "nextcloud:31.0.6-apache",
+      "image": "latest",
       "dependsOn": ["db-nextcloud", "redis-nextcloud"],
       "volumes": [
         {
