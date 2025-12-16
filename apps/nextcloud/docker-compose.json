@@ -92,6 +92,10 @@
         {
           "hostPath": "${APP_DATA_DIR}/data/db",
           "containerPath": "/var/lib/postgresql/data"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/init-db.sql",
+          "containerPath": "/docker-entrypoint-initdb.d/init.sql"
         }
       ]
     },
@@ -109,29 +113,7 @@
     {
       "name": "cron",
       "image": "nextcloud:32-apache",
-      "dependsOn": ["nextcloud"],
-      "environment": [
-        {
-          "key": "POSTGRES_HOST",
-          "value": "db-nextcloud"
-        },
-        {
-          "key": "REDIS_HOST",
-          "value": "redis-nextcloud"
-        },
-        {
-          "key": "POSTGRES_PASSWORD",
-          "value": "tipi"
-        },
-        {
-          "key": "POSTGRES_USER",
-          "value": "tipi"
-        },
-        {
-          "key": "POSTGRES_DB",
-          "value": "nextcloud"
-        }
-      ],
+      "dependsOn": ["db-nextcloud", "redis-nextcloud"],
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data/nextcloud",
