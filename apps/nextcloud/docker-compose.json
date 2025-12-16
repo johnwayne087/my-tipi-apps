@@ -109,7 +109,29 @@
     {
       "name": "cron",
       "image": "nextcloud:32-apache",
-      "dependsOn": ["db-nextcloud", "redis-nextcloud"],
+      "dependsOn": ["nextcloud"],
+      "environment": [
+        {
+          "key": "POSTGRES_HOST",
+          "value": "db-nextcloud"
+        },
+        {
+          "key": "REDIS_HOST",
+          "value": "redis-nextcloud"
+        },
+        {
+          "key": "POSTGRES_PASSWORD",
+          "value": "tipi"
+        },
+        {
+          "key": "POSTGRES_USER",
+          "value": "tipi"
+        },
+        {
+          "key": "POSTGRES_DB",
+          "value": "nextcloud"
+        }
+      ],
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data/nextcloud",
